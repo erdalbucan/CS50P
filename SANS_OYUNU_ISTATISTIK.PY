@@ -8,8 +8,17 @@ top_sayisi = list(range(1,61))
 Bilet_fiyati = 6 #int(input("bilet fiyatini giriniz"))
 
 #Program acilisinda gelen Bilgilendirme ekran yazisi
-print(
-    f"\n\n30.01.2023 tarihli Süper Loto İkramiye Tutarı baz alinmistir!!!\n\n\n6li Buyuk ikramie 47.624.485 YTL\n\n5li Ikramiye 36.915 YTL\n\n4lu ikramiye 691 YTL\n\n3lu ikramiye 36 YTL\n\n2li ikramiye 4 YTL\n\nBilet Fiyati 6 YTL\n\n\n")
+print(f"""
+PROGRAMIN HEDEFI CekilisE belirlediginiz kadar bilet alirsaniz ne kadar ikramiye kazanilabilecegi;\n
+bilet satin alma masraflari ve ikramiye gelirleri simulasyonunu cikarmaktir...
+\n\n30.01.2023 tarihli Süper Loto İkramiye Tutarı baz alinmistir!!!\n\n
+6li Buyuk ikramie 47.624.485 YTL\n
+5li Ikramiye 36.915 YTL\n
+4lu ikramiye 691 YTL\n
+3lu ikramiye 36 YTL\n
+2li ikramiye 4 YTL\n
+Bilet Fiyati 6 YTL\n\n"""
+)
 
 #cekilis basina gunluk alinan bilet sayisi
 alinan_bilet_sayisi = int(input("Kac Adet Bilet Almak Istiyorsunuz ?  "))
@@ -37,7 +46,7 @@ kazanilan_loto = {
     "2 tuttu ":0,
 }
 
-# satir 78 de aciklamasi yapilan biletleri elimizdeki bilet ile kazanan bileti karsilastirma fonksyonu
+# satir 89 da aciklamasi yapilan biletleri elimizdeki bilet ile kazanan bileti karsilastirma fonksyonu
 def bilet_karsilastir(Elimizdeki_bilet, kazananNumaralar):
     kazanilan_ikramiye = 0
 
@@ -75,7 +84,7 @@ for numara in range(cekilis_sayisi):
         Toplam_harcanan_fiyat += Bilet_fiyati
         Elimizdeki_bilet = set(random.sample(top_sayisi, k=6))
 
-        #elimizdeki bileti kazanan biletle karsilastirmak icin fonsyon yazmaliyim, 40 satirda yeni fonsyon olusturuyorum
+        #elimizdeki bileti kazanan biletle karsilastirmak icin fonsyon yazmaliyim, 51 satirda yeni fonsyon olusturuyorum
         kazanilan_ikramiye = bilet_karsilastir(Elimizdeki_bilet, kazananNumaralar)
         Toplam_kazanilan_ikramiye += kazanilan_ikramiye
 
